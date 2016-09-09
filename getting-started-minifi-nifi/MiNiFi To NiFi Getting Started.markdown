@@ -116,4 +116,7 @@ The next step is to generate the flow we need for MiNiFi. To do this do the foll
 
 
 *   We now need to save our template, as illustrated below in figure 10.
+  ![<Display Name>](<https://raw.githubusercontent.com/apsaltis/hcc-assets/master/getting-started-minifi-nifi/TemplateButton.png>)
+  Figure 10. Template button
+
 *
