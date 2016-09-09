@@ -106,5 +106,14 @@ Now we should be ready to create our flow. To do this do the following:
   Figure 8. Adding GenerateFlowFile Connection to Remote Processor Group
 
 The next step is to generate the flow we need for MiNiFi. To do this do the following steps:
-*   Select the GenerateFlowFile and the NiFi Flow Remote Processor Group
+*   Create a template for MiNiFi illustrated below in figure 9.
+  ![<Display Name>](<https://raw.githubusercontent.com/apsaltis/hcc-assets/master/getting-started-minifi-nifi/CreatingTemplate.png>)
+  Figure 9. Creating a template
+
+  *   Select the GenerateFlowFile and the NiFi Flow Remote Processor Group
+  *   Select the "Create Template" button from the toolbar
+  *   Choose a name for your template
+
+
+*   We now need to save our template, as illustrated below in figure 10.
 *
