@@ -117,6 +117,28 @@ The next step is to generate the flow we need for MiNiFi. To do this do the foll
 
 *   We now need to save our template, as illustrated below in figure 10.
   ![<Display Name>](<https://raw.githubusercontent.com/apsaltis/hcc-assets/master/getting-started-minifi-nifi/TemplateButton.png>)
+
   Figure 10. Template button
 
-*
+*  Now we need to download the template as shwon below in figure 11
+  ![<Display Name>](<https://raw.githubusercontent.com/apsaltis/hcc-assets/master/getting-started-minifi-nifi/DownloadTemplate.png>)
+
+  Figure 11. Saving a template
+
+7. Your canvas should now look similar to what is shown below in figure 8
+We are now ready to setup our flow for MiNiFi, however before doing that we need to convert the template to  YAML format which MiNiFi uses. To do this we need to do the following:
+  * Navigate to the minifi-toolkit directory (minifi-toolkit-0.0.1)
+  * Transform the template that we downloaded using the following command:
+
+    ````bin/config.sh transform <INPUT_TEMPLATE> <OUTPUT_FILE>````
+
+    For example:
+
+    ````bin/config.sh transform MiNiFi_Flow.xml config.yml````
+
+  * The next thing to do is to copy the ````config.yml```` to the ````minifi-0.0.1/conf```` directory
+
+### Starting MiNiFi ####
+1. We are now ready to start MiNiFi, to do this navigate to the MiNiFI directory and execute:
+
+````
