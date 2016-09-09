@@ -93,21 +93,26 @@ Now we should be ready to create our flow. To do this do the following:
 	* Add a Remote Processor Group to the canvas as shown below in Figure 6
 	
 ![<Display Name>](<https://raw.githubusercontent.com/apsaltis/hcc-assets/master/getting-started-minifi-nifi/AddingRPG.png>)
-	Figure 6. Adding the Remote Processor Group
+	
+Figure 6. Adding the Remote Processor Group
 		
    * For the URL copy and paste the URL for the NiFi UI from your browser
    * Connect the GenerateFlowFile to the Remote Process Group as shown below in figure 7. (You may have to refresh the Remote Processor Group, before the input port will be available)
 
 ![<Display Name>](<https://raw.githubusercontent.com/apsaltis/hcc-assets/master/getting-started-minifi-nifi/AddingGFFToRPGConnection.png>)
 	
-    Figure 7. Adding GenerateFlowFile Connection to Remote Processor Group
+Figure 7. Adding GenerateFlowFile Connection to Remote Processor Group
 
 
 6. Your canvas should now look similar to what is shown below in figure 8.
 
-![<Display Name>](<https://raw.githubusercontent.com/apsaltis/hcc-assets/master/getting-started-minifi-nifi/AddingGFFToRPGConnection.png>)
+![<Display Name>](<https://raw.githubusercontent.com/apsaltis/hcc-assets/master/getting-started-minifi-nifi/WholeFlow.png>)
 	
-    Figure 8. Adding GenerateFlowFile Connection to Remote Processor Group
+Figure 8. Adding GenerateFlowFile Connection to Remote Processor Group
+
+The next step is to generate the flow we need for MiNiFi. To do this do the following steps:
+*   Select the GenerateFlowFile and the NiFi Flow Remote Processor Group
+*   
 			 
 	
 	
