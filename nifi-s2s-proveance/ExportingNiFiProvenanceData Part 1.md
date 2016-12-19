@@ -46,7 +46,7 @@ Before starting up the this NiFi instane we need to enable Site-to-Site communic
 			nifi.remote.input.host=localhost
 			nifi.remote.input.socket.port=10000
 			nifi.remote.input.secure=false
-      			nifi.web.http.port=8088
+      		nifi.web.http.port=8088
 			
 
 ## Starting up the both instances of NiFi
