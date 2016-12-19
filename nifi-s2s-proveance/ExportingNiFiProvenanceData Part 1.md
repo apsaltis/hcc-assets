@@ -11,7 +11,7 @@ In this tutorial, we will learn how configure NiFi to send provenance data to a 
 7. Inspecting the Provenance data
 8. Next Steps
 
-**NOTE**: In this tutorial we are going to be taking the following shortcuts, in the spirit of understanding the concepts. Specifically we are going to:
+**NOTE:** In this tutorial we are going to be taking the following shortcuts, in the spirit of understanding the concepts. Specifically we are going to:
   * Run two NiFi instances on the same host.
   * Not configure security in either NiFi instance or use a secure transport between NiFi hosts.
 
@@ -38,17 +38,21 @@ Before starting up the this NiFi instane we need to enable Site-to-Site communic
 			nifi.remote.input.host=
 			nifi.remote.input.socket.port=
 			nifi.remote.input.secure=true
-      nifi.web.http.port=8080
+      		nifi.web.http.port=8080
+
+
 	To
 
 
 			nifi.remote.input.host=localhost
 			nifi.remote.input.socket.port=10000
 			nifi.remote.input.secure=false
-      nifi.web.http.port=8088
+      		nifi.web.http.port=8088
+      
 
 ## Starting up the both instances of NiFi
 We now have the two NiFi instances ready, to start them do the following:
+
 1. Navigate to the directory for the first NiFi instance and start it according to your operting system
 2. Navigate to the directory for the Provenance Reporting Instance and start it according to your operting system
 
@@ -86,10 +90,10 @@ We are now ready to add the provenance reporting task the NiFi flow. To do this 
 3. Chose the SiteToSiteProvenanceReportingTask ![plus](<https://raw.githubusercontent.com/apsaltis/hcc-assets/master/nifi-s2s-proveance/s2s_task_add.png>)
 4. Click on the pencil icon and edit the SiteToSiteProvenanceReportingTask properties so it looks like this: ![s2s properties](<https://raw.githubusercontent.com/apsaltis/hcc-assets/master/nifi-s2s-proveance/s2s_task_edit_properties.png>)
 
-    **NOTE** I set the batch size to 1, this is for demo purposes only. In a production environment you would want to adjust this or leave it as the default 1000.
+    **NOTE:** I set the batch size to 1, this is for demo purposes only. In a production environment you would want to adjust this or leave it as the default 1000.
 5. Adjust the settings for the SiteToSiteProvenanceReportingTask so that the run schedule is 5 seconds and not the default 5 minutes. ![s2s_settings](<https://raw.githubusercontent.com/apsaltis/hcc-assets/master/nifi-s2s-proveance/s2s_task_edit_run.png>)
 
-    **NOTE** Again this is for demo purposes only. In a production environment you may want to leave this as the default or adjust it accordingly.
+    **NOTE:** Again this is for demo purposes only. In a production environment you may want to leave this as the default or adjust it accordingly.
 
 ## Starting the flow
 We are now all ready to start the DateConversion flow we created before. Go ahead and just click on the start button on the operate palette.
@@ -103,6 +107,7 @@ To inspect the provenance data, go the Provenance Reporting Instance instance (h
 ![operate](<https://raw.githubusercontent.com/apsaltis/hcc-assets/master/nifi-s2s-proveance/flow_queue.png>)
 
 To view the provenenace data do the following:
+
 1. Right click on the queue and chose "List queue"
 2. Pick one of the flow files in the queue
 3. Chose "View" to see the content, an example of a formatted provenance event looks like this:
